@@ -4,7 +4,7 @@
   "description": "Site Version with Bootstrap, Express.js",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "node app.js"
   },
   "repository": {
     "type": "git",

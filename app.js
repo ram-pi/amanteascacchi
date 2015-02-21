@@ -31,5 +31,8 @@ app.get("/home", function(req, res) {
 
 /* Test page using EJS */
 app.get("/ejs", function(req, res) {
-	res.render("pages/index");
+	var welcome = "Welcome to this test EJS page! ;)"
+	res.render("pages/index", {
+		welcome: welcome
+	});
 });
