@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<% include ../partials/head %>
+	</head>
+
+	<body>
+		<div class="container" style="padding-top:20px">
+			<form action="addNews" method="POST" role="form">
+				<legend>Add news</legend>
+			
+				<div class="form-group">
+					<label for="title">Title</label>
+					<input type="text" class="form-control" id="title" name="title">
+					<span class="label">Content</span>
+					<textarea class="form-control" rows="5" id="content" name="content"></textarea>
+				</div>
+			
+				
+			
+				<button type="submit" class="btn btn-primary">Add news</button>
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<% include ../partials/head %>
+	</head>
+
+	<body>
+		<div class="container" style="padding-top:10px">
+			<% for(var i=0; i<news.length; i++) { %>
+			<div class="jumbotron">
+				<div class="container">
+					<h2> <%= news[i].title %> </h2>
+					<p>
+						<%= news[i].content %>
+					</p>
+				</div>
+			</div>
+			<% } %>
+		</div>
+	</body>
+</html>

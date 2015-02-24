@@ -10,8 +10,9 @@ var server = app.listen(3000, function() {
 	console.log("Your directory is " + __dirname);
 	console.log("Remember to launch MongoDB!!!");
 
-	/* Remove All Users when the application starts! */
+	/* Remove All db data when the application starts! */
 	dbstuff.removeAllUsers();
+	dbstuff.removeAllNews();
 });
 
 /* Set engine to display EJS */
@@ -53,7 +54,7 @@ app.get("/form", function(req, res) {
 
 /* Handling form */
 app.post("/signin", function(req, res) {
-	console.log(req.body);
+	//console.log(req.body);
 	dbstuff.saveUser(req.body.name,
 		req.body.surname,
 		req.body.email,
@@ -76,7 +77,27 @@ app.get("/list", function(req, res) {
 	});
 });
 
+/* Form page to add news */
+app.get("/addNewsForm", function(req, res) {
+	res.render("pages/addNewsForm");
+});
 
+/* Handling of addition of a news */
+app.post("/addNews", function(req, res) {
+	dbstuff.saveNews(req.body.title, req.body.content);
+	res.redirect("/addNewsForm");
+});
+
+/* Show all news */
+app.get("/news", function(req, res) {
+	dbstuff.getNewsList(function(list) {
+		res.render("pages/news",
+				{
+					news: list
+				}
+			);
+	});
+});
 
 
 
