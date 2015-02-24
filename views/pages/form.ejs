@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<% include ../partials/head %>
+	</head>
+
+	<body>
+		<div class="container" style="padding-top:10px">
+			<form action="/signin" method="POST" role="form">
+				<legend>Iscrizione Torneo</legend>
+			
+				<div class="form-group">
+				<label for="">Nome</label>
+					<input type="text" class="form-control" name="name">
+					<label for="">Cognome</label>
+					<input type="text" class="form-control" name="surname">
+					<label for="">Email</label>
+					<input type="text" class="form-control" name="email">
+					<label for="">Città</label>
+					<input type="text" class="form-control" name="place">
+					<label for="">Nazione</label>
+					<input type="text" class="form-control" name="nation">
+					<label for="">Categoria</label>
+					<input type="text" class="form-control" name="category">
+					<label for="">Elo-ITA</label>
+					<input type="text" class="form-control" name="eloita">
+				</div>
+		
+			
+		
+				<button type="submit" class="btn btn-primary">		Iscriviti
+				</button>
+			</form>
+		</div>
+	</body>
+</html>
