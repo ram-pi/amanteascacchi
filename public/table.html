@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Iscritti Torneo</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/table.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script src="controller/core.js"></script>
+    </head>
+    <body ng-app="myApp" ng-controller="playerListController">
+        <section>
+            <table>
+                <tr>
+                    <div id="topborder">
+                        <th>NAME</th>
+                        <th>FED</th>
+                        <th>TOURNAMENT</th>
+                        <th>RATING</th>
+                    </div>
+                </tr>
+                <tr ng-repeat="player in players">
+                        <td class="even">{{player.name}}</td>
+                        <td class="even">{{player.country}}</td>
+                        <td class="even">{{player.tournament}}</td>
+                        <td class="even">{{player.rating}}</td>
+                </tr>
+            </table>
+        </section>
+    </body>
+</html>

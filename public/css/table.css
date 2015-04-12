@@ -1,0 +1,29 @@
+table {
+    margin-top: 5px;
+    width: 100%;   
+}
+
+table {
+    border: 1px solid #bebebe;
+    border-collapse: collapse;
+    color: #333;
+}
+
+th {
+    color: #d15050;   
+}
+
+th, td {
+    border-bottom: 1px solid #bebebe;
+    padding: 5px;
+    text-align: center;
+}
+
+#topborder {
+    border: 1px solid #bebebe;
+    border-top-style: hidden;
+}
+
+tr .even {
+    background-color: bisque;
+}
